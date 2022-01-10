@@ -28,8 +28,14 @@
 
 .image{
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
+}
+
+.z-index{
+    position: relative;
+    z-index: 2 ;
 }
 
 
@@ -204,6 +210,12 @@ header .points1{
     width: 300px;
     bottom: -75px;
     left: -150px;
+}
+
+header .points2{
+    width: 70%;
+    top: 65%;
+    left: 71%;
 }
 
 header .square{
