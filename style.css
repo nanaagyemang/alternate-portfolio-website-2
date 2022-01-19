@@ -37,12 +37,101 @@
     position: relative;
     z-index: 2 ;
 }
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
 
+
+
+.overlay .shape{
+  width: initial;
+  opacity: 0.13;
+  position: absolute;
+} 
+
+.overlay.overlay-lg .shape{
+  height: 55px;
+}
+.overlay.overlay-lg .shape.wave{
+  height: initial;
+  width: 88px;
+}
+.points{
+  opacity: 0.3;
+  position: absolute;
+}
+
+.section{
+    padding: 7rem 0  ;
+
+}
+.section-header{
+    text-align: center;
+    margin-bottom: 1.5rem ;
+
+
+}
+.title{
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1.5rem;
+    line-height: 1;
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
+
+}
+.title:before{
+    content:attr(data-title);
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--main-color);
+    font-size: 1.15rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+
+}
+.title::after{
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: var(--main-color);
+    bottom: 0;
+    left: 50%;
+    transform:translateX(-50%) ;
+
+}
+
+.section-header{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.title-sm{
+    color: var(--dark-one);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.points-sq{
+    width: 210px;
+}
 
 * ,*::before,*::after{
     margin: 0;
     padding: 0;
    box-sizing: border-box; 
+}
+html{
+    scroll-behavior: smooth;
 }
 
 body,
@@ -100,7 +189,7 @@ nav.container{
 }
 .links ul{
     display: flex;
-    top: 0;
+    
 }
 
 .links a{
@@ -128,7 +217,8 @@ nav.container{
  .links a:hover{
      color: var(--main-color);
 
- }   
+ }
+    
 
  .links a.active:hover{
      color: var(--main-color);
@@ -178,83 +268,59 @@ nav.container{
  .header-content .image.img-element{
       max-width: 700px;
  }
-  .overlay{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      top: 0;
-      left: 0;
-  }
-
- 
-
-  .overlay .shape{
-    width: initial;
-    opacity: 0.13;
-    position: absolute;
-} 
-
-.overlay.overlay-lg .shape{
-    height: 55px;
-}
-.overlay.overlay-lg .shape.wave{
-    height: initial;
-    width: 88px;
-}
-.points{
-    opacity: 0.3;
-    position: absolute;
-}
-header .points1{
-    width: 300px;
+  
+ header .points1 {
+    width: 420px;
     bottom: -75px;
     left: -150px;
-}
-
-header .points2{
+  }
+  
+  header .points2 {
     width: 70%;
     top: 65%;
     left: 71%;
-}
-
-header .square{
+  }
+  
+  header .square {
     right: 68%;
     top: 71%;
-}
-header .triangle{
-    right: 68%;
-    bottom: 71%;
-}
-header .half-circle1{
-    right: 50%;
-    top: 82%;
-}
-
-header .half-circle2{
+  }
+  
+  header .triangle {
+    right: 7%;
+    bottom: 75%;
+  }
+  
+  header .xshape {
+    right: 4%;
+    bottom: 50%;
+  }
+  
+  header .half-circle1 {
+    left: 50%;
+    bottom: 82%;
+  }
+  
+  header .half-circle2 {
     left: 5%;
     top: 67%;
-}
-header .wave1{
-    bottom: 8%;
-    right: 55%;
-
-}
-
-header .wave2{
+  }
+  
+  header .wave1 {
     bottom: 75%;
     left: 20%;
-}
-
-header .circle{
-    left: 30%;
+  }
+  
+  header .wave2 {
+    bottom: 8%;
+    right: 55%;
+  }
+  
+  header .circle {
+    left: 38%;
     bottom: 63%;
-}
-
-header .x{
-    right: 45%;
-    bottom: 45%;
-}
+  }
+  
 
 .letters{
     position: absolute;
@@ -264,3 +330,153 @@ header .x{
     opacity: 0.05;
 }
 
+
+.cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card-wrap{
+    position: relative;
+    margin: 1.7rem 0.8rem;
+
+}
+
+.card{
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    min-height: 520px;
+    background-color: var(--light-two);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 2rem;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:before{
+    content: attr(data-card);
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 6rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--main-color);
+    opacity: 0.1;
+}
+
+.card:after{
+    content: "";
+    width: 100%;
+    height: 0px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--main-color);
+    position: absolute;
+    transition: 0.3s;
+}
+
+.card-wrap:hover .card{
+    transform : translateY(-15px)
+}
+.card-wrap:hover .card:after{
+    height: 8px;
+}
+
+.icon{
+    width: 90px;
+    margin-bottom: 1.6rem;
+
+
+}
+
+.card .title-sm{
+    line-height: 0.8;
+}
+
+.card .text{
+    font-size: 1.15rem;
+    margin: 1.8rem 0;
+}
+
+.btn.small{
+    padding: 0.7rem 1.8rem;
+    font-size: 1rem;
+}
+
+.services .points1{
+    bottom: -50px;
+    left: -125px;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.about{
+    overflow: hidden;
+}
+
+.about img{
+    max-width: 600px;
+}
+
+.about .text{
+    margin-top: 1rem;
+}
+
+.skills{
+    margin: 1.5rem 0.2rem 0;
+}
+
+.skill{
+    margin: 1rem 0;
+}
+
+.skill-title{
+    color: #555;
+    font-weight:600 ;
+    margin-bottom: 0.3rem;
+
+}
+
+.skill-bar{
+    width: 70%;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #ece6fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-progress{
+    position: absolute;
+    height: 100%;
+    width: 70%;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    transition: 1s;
+}
+
+.about .column-1{
+    position:relative;
+
+}
+
+.about .column-1:before{
+    content: "About";
+    position: absolute;
+    font-size: 8rem;
+    color: var(--main-color);
+    opacity: 0.04;
+    top: 20px;
+    left: 0;
+    line-height: 0;
+}
+
+   

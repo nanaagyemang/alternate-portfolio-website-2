@@ -14,7 +14,7 @@
 </head>
 <body>
     <main>
-        <header>
+        <header id ="header">
           <div class="overlay overlay-lg">
             <img src="./img/shapes/square.png" class="shape square" alt="">
             <img src="./img/shapes/circle.png" class="shape circle" alt="">
@@ -33,32 +33,37 @@
             <nav>
              <div class="container"> 
                  <div class="logo"> 
-                     <img src="./img/l2.png" alt="">
+                     <img src="./img/logo.png" alt=""/>
                  </div>
+
+
                  <div class="links">
                     <ul>
                      <li>
-                       <a href="#">Home</a>  
+                       <a href="#header">Home</a>  
                      </li> 
                      <li>
-                        <a href="#">Services</a>  
+                        <a href="#services">Services</a>  
                       </li> 
                       <li>
-                        <a href="#">Portfolio</a>  
+                        <a href="#portofolio">Portfolio</a>  
                       </li> 
                       <li>
-                        <a href="#">About</a>  
+                        <a href="#about">About</a>  
                       </li>
                       <li>
-                        <a href="#">Testimonials</a>  
+                        <a href="#testimonials">Testimonials</a>  
                       </li> 
                       <li>
-                        <a href="#">Contact</a>  
+                        <a href="#contact">Contact</a>  
                       </li>
                       <li>
-                        <a href="#" class="active"> HIRE ME</a>  
+                        <a href="#hireme" class="active"> HIRE ME</a>  
                       </li>     
                     </ul> 
+                 </div>
+                 <div class ="hamburger-menu">
+                   <div class ="bar"></div>
                  </div>
              </div>   
             </nav>
@@ -76,11 +81,118 @@
 
                 </div>
                 <div class="column-2 image">
-                  <img src="./img/shapes/points2.png" class="points points2" alt="">
-                  <img src="./img/person.png" class="img-element z-index" alt="">
+                  <img src="./img/shapes/points2.png" class="points points2" alt=""/>
+                  <img src="./img/person.png" class="img-element z-index" alt=""/>
                 </div>
             </div>
         </header>
+        <section class="services section"  id="services">
+          <div class="container">
+            <div class="services-header">
+              <h3 class="title" data-title="What I Do">Services</h3>
+              <p class="text">Building up fantastic websites?</p>
+            </div>
+            
+            <div class="cards">
+              <div class="card-wrap">
+                <img
+                  src="./img/shapes/points3.png"
+                  class="points points1 points-sq"
+                  alt=""
+                />
+                <div class="card" data-card="UI/UX">
+                  <div class="card-content z-index">
+                    <img src="./img/design-icon.png" class="icon" alt="" />
+                    <h3 class="title-sm">Web Design</h3>
+                    <p class="text">
+                      For a convienient design look no further.
+                      
+                    </p>
+                    <a href="#" class="btn small">Read more</a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card-wrap">
+                <div class="card" data-card="Code">
+                  <div class="card-content z-index">
+                    <img src="./img/code-icon.png" class="icon" alt="" />
+                    <h3 class="title-sm">Web Development</h3>
+                    <p class="text">
+                      Developing professional websites.
+                      
+                    </p>
+                    <a href="#" class="btn small">Read more</a>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="card-wrap">
+                <img
+                  src="./img/shapes/points3.png"
+                  class="points points2 points-sq"
+                  alt=""
+                />
+                <div class="card" data-card="App">
+                  <div class="card-content z-index">
+                    <img src="./img/app-icon.png" class="icon" alt="" />
+                    <h3 class="title-sm">App Development</h3>
+                    <p class="text">
+                      A space for creating a user friendly app.
+                      
+                    </p>
+                    <a href="#" class="btn small">Read more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="about section">
+          <div class ="container">
+           <div class="section-header">
+             <h3 class="title" data-title="Who Am I?">About Me</h3>
+           </div>
+           <div class="section-body grid-2">
+             <div class="column-1">
+               <h3 class="title-sm">Hello I'm</h3>
+               <p class="text"> 
+                A front-end developer still exploring out more
+                about html,css and javascript.
+                I  also fancy technology and innovative ideas.
+              </p>
+              <div class="skils">
+                <div class="skill html">
+                  <h3 class="skill-title">HTML</h3>
+                  <div class="skill-bar">
+                    <div class="skill-progress"data-progress="87%"></div>
+                  </div>
+                </div>
+                <div class="skill css">
+                  <h3 class="skill-title">CSS</h3>
+                  <div class="skill-bar">
+                    <div class="skill-progress" data-progress="85%"></div>
+                  </div>
+                </div>
+                <div class="skill js">
+                  <h3 class="skill-title">JAVASCRIPT</h3>
+                  <div class="skill-bar">
+                    <div class="skill-progress"data-progress="89%"></div>
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="btn">Read more</a>
+             </div>
+             <div class="column-2 image">
+               <img src="./img/person3.JPG" alt=""/>
+             </div>
+             
+           </div> 
+          </div>
+
+        </section>
+        <section style="min-height: 2000px"></section>
+
     </main>
     <script src="portfolio.js"></script> 
 
